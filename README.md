@@ -2,6 +2,10 @@ development
 ===========
 CS1300 Project
 
+NOTE: ONLY TESTED ON CHROME. 
+IT PROBABLY WON'T WORK FOR IE < 9. 
+IT WILL QUESTIONABLY WORK ON SAFARI OR FIREFOX
+
 I created a widget that replaces the upvote / downvote bar with a pie chart to display the results in a different, more readable way than the existing percentage bar. Every site that I've seen uses a bar to show the percentages of upvotes and downvotes for a given submission (ex reddit, imgur, etc.). I find the pie chart more intuitive, and the upvote / downvote buttons are on top of / below each other, respectively, instead of next to each other, making the upvoting / downvoting more intuitive since one is "up" and the other is "down". 
 
 
