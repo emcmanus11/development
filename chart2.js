@@ -1,20 +1,7 @@
 $(document).ready(function () {
-	$(".container").on("click", ".upvote_button", function () {
+	$(".container").on("click", ".upvote_button, .downvote_button", function () {
 		var container = $(this).siblings(".pie_container"),
-		curr = container.find(".pie_upvotes"),
-		curr_votes = $(curr).attr("data-votes");
-		if (curr_votes === undefined) {
-			$(curr).attr("data-votes", 1);
-		} else {
-			curr_votes = parseInt(curr_votes);
-			$(curr).attr("data-votes", 1 + curr_votes);
-		}
-		update_chart($(this).siblings(".pie_container"));
-	});
-
-	$(".container").on("click", ".downvote_button", function () {
-		var container = $(this).siblings(".pie_container"),
-		curr = container.find(".pie_downvotes"),
+		curr = container.find($(this).attr("data-name")), 
 		curr_votes = $(curr).attr("data-votes");
 		if (curr_votes === undefined) {
 			$(curr).attr("data-votes", 1);
