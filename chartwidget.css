@@ -1,0 +1,80 @@
+.container, .pie_container, .pie_circle{
+    height: 100px;
+    width: 100px;
+}
+
+.container{
+    position: relative;
+    margin: 30px;
+}
+
+.pie_container, .pie_circle{
+    position: absolute;
+}
+
+.container, .pie_container{
+    width: 130px;
+}
+
+.pie_container{
+    margin-left: 30px;
+}
+
+.pie_circle{
+    border-radius: 100px;
+}
+
+/* Shows downvote color */
+.pie_upvotes{
+    background-color: red;
+}
+
+/* Shows upvote color */
+.pie_upvotes:before{
+    content: "";
+    background-color: green;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    position: absolute;
+    display: block;
+    clip: rect(0px 50px 100px 0px);
+}
+
+.pie_downvotes{
+    background-color: gray;
+}
+
+.clip{
+    clip: rect(0px 50px 100px 0px);
+}
+
+/* start upvote / downvote buttons*/
+.button{
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bolder;
+    font-size: 15px;
+
+    position: relative;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
+}
+
+.upvote_button{
+    background-color: green;
+    opacity: 0.5;
+    top: 15px;
+}
+
+.downvote_button{
+    background-color: red;
+    opacity: 0.5;
+    top: 30px;
+}
+/* start upvote / downvote buttons*/

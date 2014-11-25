@@ -1,91 +1,21 @@
 <!doctype html>
 <html>
     <head>
-        <style>
-            .container, .pie_container, .pie_circle{
-                position: absolute;
-                height: 100px;
-                width: 100px;
-            }
-
-            .container, .pie_container{
-                width: 130px;
-            }
-
-            .pie_container{
-                margin-left: 30px;
-            }
-
-            .pie_circle{
-                border-radius: 100px;
-            }
-
-            /* Shows downvote color */
-            .pie_upvotes{
-                background-color: red;
-            }
-
-            /* Shows upvote color */
-            .pie_upvotes:before{
-                content: "";
-                background-color: green;
-                height: 100px;
-                width: 100px;
-                border-radius: 100px;
-                position: absolute;
-                display: block;
-                clip: rect(0px 50px 100px 0px);
-            }
-
-            .pie_downvotes{
-                background-color: gray;
-            }
-
-            .clip{
-                clip: rect(0px 50px 100px 0px);
-            }
-
-            /* start upvote / downvote buttons*/
-            .button{
-                height: 30px;
-                width: 30px;
-                border-radius: 100px;
-                background-color: gray;
-                color: white;
-                text-align: center;
-                line-height: 30px;
-                font-weight: bolder;
-                font-size: 15px;
-
-                position: absolute;
-                margin-right: auto;
-                margin-left: auto;
-            }
-
-            .upvote_button{
-                background-color: green;
-                opacity: 0.5;
-            }
-
-            .downvote_button{
-                bottom: 0;
-
-                background-color: red;
-                opacity: 0.5;
-            }
-            /* start upvote / downvote buttons*/
-        </style>
+        <link rel="stylesheet" href="chartwidget.css"></link>
     </head>
     <body>
-        <div class="container">
-            <div class="pie_container">
-                <div class="pie_circle pie_upvotes" data-votes="0"></div>
-                <div class="pie_circle pie_downvotes" data-votes="0"></div>
-            </div>
-            <div class="button upvote_button" data-name=".pie_upvotes">+</div>
-            <div class="button downvote_button" data-name=".pie_downvotes">-</div>
-        </div>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="chart2.js"></script>
+        <div id="mw1"></div>
+        <div id="mw2"></div>
+        <div id="mw3"></div>
+        <div id="mw4"></div>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script type="text/javascript" src="chartwidget.js"></script>
+        <script type="text/javascript">
+            $( "#mw1" ).pieChart();
+            $( "#mw2" ).pieChart();
+            $( "#mw3" ).pieChart();
+            $( "#mw4" ).pieChart();
+        </script>
     </body>
 </html>
