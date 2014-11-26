@@ -24,6 +24,13 @@ and any identifiable div, say
 
 Lastly, call pieChart() on your identifiable div
 $("#chart").pieChart();
+	options you can add: 
+		data_upvote --> Number of upvotes a chart should display
+		data_downvote --> Number of downvotes a chart should display
+		normalchart --> boolean indicating whether the chart should act as 
+			an upvote/downvote chart or a normal pie chart
+		callback --> called after an end user has upvoted or downvoted on 
+			a chart. 
 
 TODO
 ===========
