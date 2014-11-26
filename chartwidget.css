@@ -77,4 +77,18 @@
     opacity: 0.5;
     top: 30px;
 }
-/* start upvote / downvote buttons*/
+/* end upvote / downvote buttons*/
+
+/*start upvote / downvote labels*/
+.upvote_label{
+    top: 15px;
+    left: 5px;
+    position: relative;
+}
+
+.downvote_label{
+    top: -15px;
+    position: relative;
+    left: 5px;
+}
+/*end upvote / downvote labels*/

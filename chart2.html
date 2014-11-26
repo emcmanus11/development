@@ -2,22 +2,71 @@
 <html>
     <head>
         <link rel="stylesheet" href="chartwidget.css"></link>
+        <style type="text/css">
+            .content{
+
+            }
+
+            .item{
+                height: 300px;
+                width: 800px;
+                margin: 12px;
+                border-color: blue;
+                border-width: 1px;
+                border-style: solid;
+            }
+
+            .content, .container{
+                display: inline-block;
+            }
+
+            img{
+                height: 200px;
+                width: auto;
+            }
+
+
+        </style>
     </head>
     <body>
-        <div id="mw1"></div>
-        <div id="mw2"></div>
-        <div id="mw3"></div>
-        <div id="mw4"></div>
-        <div id="mw5"></div>
+        <div id="container"></div>
         <script src="jquery-1.10.2.js"></script>
         <script src="jquery-ui.js"></script>
         <script type="text/javascript" src="chartwidget.js"></script>
         <script type="text/javascript">
-            $( "#mw1" ).pieChart();
-            $( "#mw2" ).pieChart();
-            $( "#mw3" ).pieChart();
-            $( "#mw4" ).pieChart();
-            $( "#mw5" ).pieChart();
+            var str = "",
+            lis = ["http://i.imgur.com/caook6L.jpg", "http://i.imgur.com/OPu9TJi.jpg", "http://www.imgion.com/images/01/White-Cute-Puppy-.jpg", "http://i.imgur.com/sR4rK.jpg", ];
+
+            for (var i = 1; i < 5; i++) {
+                str+= '<div class="item"><div id="mw'+i+'"></div><div class="content">Here\'s some content<img src="'+lis[i-1]+'"></div></div>'
+            };
+            str+= '<div class="item"><div id="mw5"></div>Normal pie chart. Not the upvote / downvote kind</div>'
+            $("#container").append(str);
+
+            $( "#mw1" ).pieChart({
+                data_upvote: 0,
+                data_downvote: 0
+            });
+            $( "#mw2" ).pieChart({
+                data_upvote: 50,
+                data_downvote: 50
+            });
+            $( "#mw3" ).pieChart({
+                data_upvote: 47,
+                data_downvote: 93
+            });
+            $( "#mw4" ).pieChart({
+                data_upvote: 36,
+                data_downvote: 12,
+                callback: function() {
+                    console.log("This is a callback");
+                }
+            });
+
+            // Normal pie chart
+            $( "#mw5" ).pieChart({
+                normalchart: true
+            });
         </script>
     </body>
 </html>
